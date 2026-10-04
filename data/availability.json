@@ -1,37 +1,4 @@
 {
-  "updatedAt": "2026-10-04T08:00:00Z",
-  "blocked": {
-    "jerusalem-rechavia-garden": [
-      {
-        "from": "2026-10-09",
-        "to": "2026-10-10"
-      },
-      {
-        "from": "2026-10-29",
-        "to": "2026-11-01"
-      }
-    ],
-    "safed-old-city-stone-house": [
-      {
-        "from": "2026-10-15",
-        "to": "2026-10-17"
-      }
-    ],
-    "netanya-seafront-penthouse": [
-      {
-        "from": "2026-10-22",
-        "to": "2026-10-24"
-      }
-    ],
-    "beit-shemesh-family-house": [
-      {
-        "from": "2026-10-09",
-        "to": "2026-10-11"
-      },
-      {
-        "from": "2026-11-05",
-        "to": "2026-11-07"
-      }
-    ]
-  }
+  "updatedAt": "2026-10-04T16:55:07.518Z",
+  "blocked": {}
 }
