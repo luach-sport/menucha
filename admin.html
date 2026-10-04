@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>ניהול · מנוחה</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Suez+One&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body class="admin-page">
+  <header class="site-header is-plain">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" data-icon="candles"></span>
+        <span class="brand-name" data-site-name>מנוחה</span>
+        <span class="brand-tag">ניהול</span>
+      </a>
+      <div class="admin-user" id="admin-user" hidden>
+        <span id="admin-login"></span>
+        <button class="btn btn-quiet btn-small" type="button" id="logout"><span data-icon="logout"></span>יציאה</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="login-card" id="login" aria-labelledby="login-title">
+      <h1 id="login-title" style="font-size:1.8rem">כניסה לניהול</h1>
+      <p class="muted">הנתונים יושבים ב-GitHub. כדי לראות ולעדכן אותם, הדביקו כאן טוקן גישה אישי (Fine-grained token). הטוקן נשמר רק בדפדפן הזה.</p>
+      <div id="config-warning"></div>
+      <form class="form-grid" id="login-form">
+        <div class="field">
+          <label for="token">טוקן גישה של GitHub</label>
+          <input class="input" id="token" type="password" dir="ltr" autocomplete="off" spellcheck="false" placeholder="github_pat_…">
+          <span class="field-error" id="token-error"></span>
+        </div>
+        <label class="check" style="width:max-content"><input type="checkbox" id="remember">לזכור במחשב הזה</label>
+        <div class="submit-row">
+          <button class="btn" type="submit" id="login-btn"><span data-icon="key"></span>כניסה</button>
+          <button class="btn btn-quiet" type="button" id="demo-btn">מצב הדגמה עם נתונים לדוגמה</button>
+        </div>
+      </form>
+      <details>
+        <summary>איך יוצרים טוקן?</summary>
+        <ol>
+          <li>ב-GitHub: Settings ← Developer settings ← Personal access tokens ← Fine-grained tokens ← Generate new token.</li>
+          <li>Repository access: בחרו את רפוזיטורי האתר ואת רפוזיטורי הפניות (אם יש).</li>
+          <li>הרשאות: Issues — Read and write. Pull requests — Read and write. Contents — Read and write. Actions — Read and write.</li>
+          <li>העתיקו את הטוקן והדביקו כאן. פירוט מלא בקובץ README.</li>
+        </ol>
+      </details>
+    </section>
+
+    <section id="app" hidden>
+      <div class="admin-bar">
+        <h1>ניהול</h1>
+        <div class="submit-row">
+          <span class="small muted" id="sync-note"></span>
+          <button class="btn btn-quiet btn-small" type="button" id="refresh"><span data-icon="refresh"></span>רענון</button>
+        </div>
+      </div>
+      <div class="tabs" role="tablist" aria-label="אזורי ניהול">
+        <button class="tab" role="tab" id="tab-leads" aria-controls="panel-leads" aria-selected="true">פניות <span class="count" id="count-leads">0</span></button>
+        <button class="tab" role="tab" id="tab-calendar" aria-controls="panel-calendar" aria-selected="false" tabindex="-1">יומן תפוסה</button>
+        <button class="tab" role="tab" id="tab-props" aria-controls="panel-props" aria-selected="false" tabindex="-1">דירות לאישור <span class="count" id="count-props">0</span></button>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-leads" aria-labelledby="tab-leads">
+        <div class="toolbar">
+          <label class="sort">דירה
+            <select id="lead-filter"><option value="">כל הדירות</option></select>
+          </label>
+          <span class="small muted">גררו כרטיס לעמודה אחרת, או בחרו סטטוס מהרשימה בכרטיס.</span>
+        </div>
+        <div class="kanban" id="kanban"></div>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-calendar" aria-labelledby="tab-calendar" hidden>
+        <div class="toolbar">
+          <div class="submit-row">
+            <button class="btn btn-quiet btn-small" type="button" id="cal-back" aria-label="שבוע אחורה"><span data-icon="chevronRight"></span></button>
+            <button class="btn btn-quiet btn-small" type="button" id="cal-today">היום</button>
+            <button class="btn btn-quiet btn-small" type="button" id="cal-fwd" aria-label="שבוע קדימה"><span data-icon="chevronLeft"></span></button>
+            <strong id="cal-range"></strong>
+          </div>
+        </div>
+        <div class="gantt-wrap"><div class="gantt" id="gantt"></div></div>
+        <div class="gantt-legend">
+          <span><i style="background:var(--ok)"></i>הזמנה מאושרת</span>
+          <span><i style="background:var(--warn)"></i>חסימה ידנית</span>
+          <span><i style="border:1.5px dashed var(--safed);background:var(--safed-soft)"></i>פניה שממתינה לטיפול</span>
+          <span><i style="background:var(--sunken);border:1px solid var(--line)"></i>שישי ושבת</span>
+        </div>
+        <div class="detail-panel" id="detail" hidden></div>
+        <form class="block-form" id="block-form">
+          <div class="field wide"><label for="bf-apt">חסימה ידנית: דירה</label><select class="input" id="bf-apt" required></select></div>
+          <div class="field"><label for="bf-from">מתאריך</label><input class="input" type="date" id="bf-from" required></div>
+          <div class="field"><label for="bf-to">עד (יום העזיבה)</label><input class="input" type="date" id="bf-to" required></div>
+          <div class="field wide"><label for="bf-note">הערה</label><input class="input" id="bf-note" maxlength="80" placeholder="שיפוץ / הבעלים בדירה / הזמנה מחוץ לאתר"></div>
+          <button class="btn" type="submit">חסימת התאריכים</button>
+        </form>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-props" aria-labelledby="tab-props" hidden>
+        <p class="muted" style="margin-bottom:14px">דירות שבעלים שלחו דרך הטופס. "אישור ופרסום" ממזג את הבקשה, והדירה עולה לאתר תוך כמה דקות.</p>
+        <div class="pr-list" id="pr-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/pricing.js"></script>
+  <script src="assets/js/validate.js"></script>
+  <script src="assets/js/amenities.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/admin.js"></script>
+</body>
+</html>

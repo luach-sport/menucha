@@ -1,0 +1,38 @@
+# טופס בעלי דירות → ענף חדש + Pull Request עם קובץ JSON של הדירה.
+# הדירה מופיעה באתר רק אחרי שהמנהל מאשר (Merge).
+name: דירה חדשה מבעלים
+
+on:
+  repository_dispatch:
+    types: [new_property]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  property:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: יצירת Pull Request לדירה
+        run: node scripts/create-property.js
+        env:
+          PAYLOAD: ${{ toJSON(github.event.client_payload) }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BASE_BRANCH: ${{ github.event.repository.default_branch }}
+          SITE_URL: ${{ vars.SITE_URL }}
+          CALLMEBOT_WHATSAPP_PHONE: ${{ secrets.CALLMEBOT_WHATSAPP_PHONE }}
+          CALLMEBOT_WHATSAPP_APIKEY: ${{ secrets.CALLMEBOT_WHATSAPP_APIKEY }}
+          CALLMEBOT_TELEGRAM_USER: ${{ secrets.CALLMEBOT_TELEGRAM_USER }}
+          CALLMEBOT_VOICE_CALL: ${{ vars.CALLMEBOT_VOICE_CALL }}
+          CALLMEBOT_VOICE: ${{ vars.CALLMEBOT_VOICE }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>מנוחה · דירות לשבת</title>
+  <meta name="description" content="דירות לשבתות ולסופי שבוע, עם פלטה, מיחם ושעוני שבת. מחיר מדויק לתאריכים שלכם ובקשת שריון בלי כרטיס אשראי.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Suez+One&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <div class="demo-banner" data-demo-banner hidden>מצב הדגמה — בקשות שנשלחות מהאתר לא מגיעות לשום מקום.</div>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" data-icon="candles"></span>
+        <span class="brand-name" data-site-name>מנוחה</span>
+        <span class="brand-tag" data-site-tagline>דירות לשבתות ולסופי שבוע</span>
+      </a>
+      <div class="header-contact" data-manager-phone>
+        <span class="label">שאלה? </span>
+        <a href="#" target="_blank" rel="noopener"><span data-icon="message"></span><span data-phone-text></span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div>
+          <h1 id="hero-title">מקום לשבת.</h1>
+          <p class="hero-lede">דירות לשבתות ולסופי שבוע, עם פלטה, מיחם ושעוני שבת כבר בפנים. בוחרים תאריכים, רואים מחיר מדויק, ושולחים בקשה לשריון.</p>
+        </div>
+        <div class="this-shabbat" id="this-shabbat" aria-live="polite">
+          <div class="this-shabbat-head"><strong>זמני השבת הקרובה</strong><span id="this-shabbat-date"></span></div>
+          <table class="zmanim-table">
+            <thead><tr><th scope="col">עיר</th><th scope="col">הדלקת נרות</th><th scope="col">צאת שבת</th></tr></thead>
+            <tbody id="zmanim-rows"></tbody>
+          </table>
+          <p class="zmanim-note">חישוב משוער לפי השקיעה בכל עיר. לזמנים מדויקים בדקו בלוח מקומי.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <form class="search-panel" id="search" role="search" aria-label="חיפוש דירה">
+        <div class="quick-dates" id="quick-dates">
+          <span class="quick-dates-label">מתי?</span>
+        </div>
+        <div class="search-fields">
+          <div class="field">
+            <label for="checkin">הגעה</label>
+            <input class="input" type="date" id="checkin" name="checkin" required>
+          </div>
+          <div class="field">
+            <label for="checkout">עזיבה</label>
+            <input class="input" type="date" id="checkout" name="checkout" required>
+          </div>
+          <div class="field field-where">
+            <label for="where">עיר או שכונה</label>
+            <select class="input" id="where" name="where">
+              <option value="">כל הארץ</option>
+            </select>
+          </div>
+          <div class="field">
+            <span class="label" id="guests-label">אורחים</span>
+            <div class="stepper" role="group" aria-labelledby="guests-label">
+              <button type="button" data-step="guests" data-delta="-1" aria-label="פחות אורחים"><span data-icon="minus"></span></button>
+              <output id="guests" aria-live="polite">2</output>
+              <button type="button" data-step="guests" data-delta="1" aria-label="עוד אורח"><span data-icon="plus"></span></button>
+            </div>
+          </div>
+          <div class="field">
+            <span class="label" id="infants-label">תינוקות (עד גיל 2)</span>
+            <div class="stepper" role="group" aria-labelledby="infants-label">
+              <button type="button" data-step="infants" data-delta="-1" aria-label="פחות תינוקות"><span data-icon="minus"></span></button>
+              <output id="infants" aria-live="polite">0</output>
+              <button type="button" data-step="infants" data-delta="1" aria-label="עוד תינוק"><span data-icon="plus"></span></button>
+            </div>
+          </div>
+          <button class="btn" type="submit">הצגת דירות</button>
+        </div>
+        <p class="stay-summary" id="stay-summary" aria-live="polite"></p>
+      </form>
+
+      <section class="results" id="results" aria-labelledby="results-title">
+        <div class="results-head">
+          <div>
+            <h2 id="results-title">דירות</h2>
+            <p id="results-sub"></p>
+          </div>
+          <label class="sort">מיון
+            <select id="sort">
+              <option value="price">מחיר, מהזול</option>
+              <option value="size">מספר מקומות לינה</option>
+              <option value="new">חדשות באתר</option>
+            </select>
+          </label>
+        </div>
+        <div id="listings"><p class="loading">טוען דירות…</p></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span><span data-site-name>מנוחה</span> · © <span data-year></span></span>
+      <span>השריון נעשה מול מנהל הדירות בטלפון. אין תשלום באתר.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/pricing.js"></script>
+  <script src="assets/js/zmanim.js"></script>
+  <script src="assets/js/amenities.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/search.js"></script>
+</body>
+</html>

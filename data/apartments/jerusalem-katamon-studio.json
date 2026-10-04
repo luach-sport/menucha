@@ -1,0 +1,85 @@
+{
+  "id": "jerusalem-katamon-studio",
+  "title": "סטודיו בקטמון הישנה",
+  "city": "ירושלים",
+  "neighborhood": "קטמון הישנה",
+  "geo": {
+    "lat": 31.7618,
+    "lng": 35.2095
+  },
+  "candleLightingMinutes": 40,
+  "rooms": 1,
+  "beds": 2,
+  "maxGuests": 3,
+  "cribs": 0,
+  "summary": "יחידה קטנה ומוארת לזוג, בקומה שנייה עם נוף לגגות השכונה.",
+  "description": "סטודיו מרווח לזוג או לזוג עם ילד, בבניין ישן ומשופץ בקטמון הישנה. החלון הגדול פונה לגגות השכונה, והמרפסת הקטנה מספיקה לכוס קפה בבוקר שבת.\n\nפינת מטבח כשרה עם פלטה ומיחם קטן, ושעון שבת על המזגן ועל המנורה ליד המיטה. ספה נפתחת לאורח שלישי.\n\nרחוב עמק רפאים עם בתי הכנסת והקפה נמצא במרחק חמש דקות הליכה.",
+  "highlights": [
+    "5 דקות הליכה לעמק רפאים",
+    "מתאים לזוג או לזוג עם ילד אחד",
+    "כניסה בקוד"
+  ],
+  "amenities": [
+    "plata",
+    "urn",
+    "shabbat_clocks",
+    "kosher_kitchen",
+    "near_synagogue",
+    "late_checkout_motzash",
+    "keypad_lock",
+    "ac",
+    "wifi",
+    "balcony"
+  ],
+  "houseRules": [
+    "בלי עישון",
+    "הבניין בלי מעלית — 26 מדרגות"
+  ],
+  "checkInTime": "14:00",
+  "checkOutTime": "11:00",
+  "images": [
+    {
+      "src": "assets/img/apartments/jerusalem-katamon-studio/1.svg",
+      "alt": "נוף מהחלון לגגות ודודי השמש של קטמון",
+      "placeholder": true
+    },
+    {
+      "src": "assets/img/apartments/jerusalem-katamon-studio/2.svg",
+      "alt": "פינת השינה",
+      "placeholder": true
+    },
+    {
+      "src": "assets/img/apartments/jerusalem-katamon-studio/3.svg",
+      "alt": "שולחן לשניים",
+      "placeholder": true
+    }
+  ],
+  "pricing": {
+    "nightly": 420,
+    "weekendNightly": 560,
+    "weekendNights": [
+      4,
+      5
+    ],
+    "includedGuests": 2,
+    "extraGuestPerNight": 80,
+    "cleaningFee": 120,
+    "minNights": 1,
+    "lengthDiscounts": [
+      {
+        "minNights": 4,
+        "percent": 8
+      }
+    ],
+    "specialPeriods": [
+      {
+        "name": "חנוכה",
+        "from": "2026-12-04",
+        "to": "2026-12-11",
+        "nightly": 650
+      }
+    ]
+  },
+  "published": true,
+  "createdAt": "2026-09-01"
+}

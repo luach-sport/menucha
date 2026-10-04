@@ -1,0 +1,90 @@
+{
+  "id": "safed-old-city-stone-house",
+  "title": "בית אבן בעיר העתיקה",
+  "city": "צפת",
+  "neighborhood": "העיר העתיקה",
+  "geo": {
+    "lat": 32.9646,
+    "lng": 35.496
+  },
+  "candleLightingMinutes": 18,
+  "rooms": 5,
+  "beds": 11,
+  "maxGuests": 12,
+  "cribs": 2,
+  "summary": "בית משפחתי בן 150 שנה בסמטאות, ארבע דקות מבית הכנסת האר״י.",
+  "description": "בית אבן עם דלת כחולה בלב סמטאות העיר העתיקה, במרחק הליכה מבתי הכנסת העתיקים. חמישה חדרי שינה על שתי קומות, וסלון גדול עם שולחן ל־14 סועדים.\n\nהמטבח כשר למהדרין: שתי פלטות, מיחם גדול, ושעוני שבת על כל המזגנים והתאורה. במרפסת העליונה נבנית סוכה בחג הסוכות.\n\nמתאים לשבתות משפחתיות, לשבת חתן קטנה ולקבוצות. חניה ציבורית ברחוב ירושלים, חמש דקות הליכה.",
+  "highlights": [
+    "בית הכנסת האר״י — 4 דקות הליכה",
+    "שולחן ל־14 ושתי פלטות",
+    "סוכה במרפסת בחג הסוכות"
+  ],
+  "amenities": [
+    "plata",
+    "urn",
+    "shabbat_clocks",
+    "kosher_kitchen",
+    "near_synagogue",
+    "late_checkout_motzash",
+    "sukkah",
+    "crib",
+    "high_chair",
+    "ac",
+    "wifi",
+    "balcony",
+    "washing_machine"
+  ],
+  "houseRules": [
+    "בלי עישון בתוך הבית",
+    "אין חניה צמודה",
+    "מדרגות אבן בכניסה"
+  ],
+  "checkInTime": "13:00",
+  "checkOutTime": "11:00",
+  "images": [
+    {
+      "src": "assets/img/apartments/safed-old-city-stone-house/1.svg",
+      "alt": "הדלת הכחולה בסמטה",
+      "placeholder": true
+    },
+    {
+      "src": "assets/img/apartments/safed-old-city-stone-house/2.svg",
+      "alt": "שולחן שבת בסלון",
+      "placeholder": true
+    },
+    {
+      "src": "assets/img/apartments/safed-old-city-stone-house/3.svg",
+      "alt": "חדר השינה הראשי",
+      "placeholder": true
+    }
+  ],
+  "pricing": {
+    "nightly": 1100,
+    "weekendNightly": 1600,
+    "weekendNights": [
+      4,
+      5
+    ],
+    "includedGuests": 6,
+    "extraGuestPerNight": 90,
+    "cleaningFee": 300,
+    "minNights": 1,
+    "lengthDiscounts": [
+      {
+        "minNights": 3,
+        "percent": 12
+      }
+    ],
+    "specialPeriods": [
+      {
+        "name": "ל״ג בעומר",
+        "from": "2027-05-24",
+        "to": "2027-05-25",
+        "nightly": 2400,
+        "minNights": 2
+      }
+    ]
+  },
+  "published": true,
+  "createdAt": "2026-09-03"
+}

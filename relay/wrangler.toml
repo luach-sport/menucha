@@ -1,0 +1,13 @@
+# למי שמעדיף להעלות את הממסר משורת הפקודה (npx wrangler deploy).
+# אפשר גם בלי זה: להדביק את worker.js בעורך של Cloudflare (ראו README, שלב 3).
+name = "menucha-relay"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+GITHUB_REPO = "luach-sport/menucha"
+ALLOWED_ORIGINS = "https://luach-sport.github.io"
+
+# את הסודות מגדירים בנפרד, לא בקובץ הזה:
+#   npx wrangler secret put GITHUB_TOKEN
+#   npx wrangler secret put OWNER_CODE

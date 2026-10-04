@@ -1,0 +1,537 @@
+{
+  "apartments": [
+    {
+      "id": "jerusalem-katamon-studio",
+      "title": "סטודיו בקטמון הישנה",
+      "city": "ירושלים",
+      "neighborhood": "קטמון הישנה",
+      "geo": {
+        "lat": 31.7618,
+        "lng": 35.2095
+      },
+      "candleLightingMinutes": 40,
+      "rooms": 1,
+      "beds": 2,
+      "maxGuests": 3,
+      "cribs": 0,
+      "summary": "יחידה קטנה ומוארת לזוג, בקומה שנייה עם נוף לגגות השכונה.",
+      "description": "סטודיו מרווח לזוג או לזוג עם ילד, בבניין ישן ומשופץ בקטמון הישנה. החלון הגדול פונה לגגות השכונה, והמרפסת הקטנה מספיקה לכוס קפה בבוקר שבת.\n\nפינת מטבח כשרה עם פלטה ומיחם קטן, ושעון שבת על המזגן ועל המנורה ליד המיטה. ספה נפתחת לאורח שלישי.\n\nרחוב עמק רפאים עם בתי הכנסת והקפה נמצא במרחק חמש דקות הליכה.",
+      "highlights": [
+        "5 דקות הליכה לעמק רפאים",
+        "מתאים לזוג או לזוג עם ילד אחד",
+        "כניסה בקוד"
+      ],
+      "amenities": [
+        "plata",
+        "urn",
+        "shabbat_clocks",
+        "kosher_kitchen",
+        "near_synagogue",
+        "late_checkout_motzash",
+        "keypad_lock",
+        "ac",
+        "wifi",
+        "balcony"
+      ],
+      "houseRules": [
+        "בלי עישון",
+        "הבניין בלי מעלית — 26 מדרגות"
+      ],
+      "checkInTime": "14:00",
+      "checkOutTime": "11:00",
+      "images": [
+        {
+          "src": "assets/img/apartments/jerusalem-katamon-studio/1.svg",
+          "alt": "נוף מהחלון לגגות ודודי השמש של קטמון",
+          "placeholder": true
+        },
+        {
+          "src": "assets/img/apartments/jerusalem-katamon-studio/2.svg",
+          "alt": "פינת השינה",
+          "placeholder": true
+        },
+        {
+          "src": "assets/img/apartments/jerusalem-katamon-studio/3.svg",
+          "alt": "שולחן לשניים",
+          "placeholder": true
+        }
+      ],
+      "pricing": {
+        "nightly": 420,
+        "weekendNightly": 560,
+        "weekendNights": [
+          4,
+          5
+        ],
+        "includedGuests": 2,
+        "extraGuestPerNight": 80,
+        "cleaningFee": 120,
+        "minNights": 1,
+        "lengthDiscounts": [
+          {
+            "minNights": 4,
+            "percent": 8
+          }
+        ],
+        "specialPeriods": [
+          {
+            "name": "חנוכה",
+            "from": "2026-12-04",
+            "to": "2026-12-11",
+            "nightly": 650
+          }
+        ]
+      },
+      "published": true,
+      "createdAt": "2026-09-01"
+    },
+    {
+      "id": "jerusalem-rechavia-garden",
+      "title": "דירת גן ברחביה",
+      "city": "ירושלים",
+      "neighborhood": "רחביה",
+      "geo": {
+        "lat": 31.7726,
+        "lng": 35.2118
+      },
+      "candleLightingMinutes": 40,
+      "rooms": 4,
+      "beds": 7,
+      "maxGuests": 7,
+      "cribs": 1,
+      "summary": "ארבעה חדרים, גינה פרטית ושלוש דקות הליכה לבית הכנסת ישורון.",
+      "description": "דירת גן שקטה בבניין אבן ישן ברחביה, ברחוב צדדי בלי תנועה בשבת. הסלון נפתח לגינה עם שולחן לשמונה, כך שאפשר לעשות את סעודת השבת בחוץ כשמזג האוויר מאפשר.\n\nבמטבח שני כיורים, כלים נפרדים לבשר ולחלב, פלטה גדולה ומיחם של 40 כוסות. שעוני שבת מותקנים על המזגנים, על התאורה בסלון ובחדרי השינה.\n\nבחדר ההורים מיטה זוגית, בשני חדרי הילדים שתי מיטות בכל חדר, ובסלון ספה נפתחת. מיטת תינוק וכיסא אוכל מחכים בארון.",
+      "highlights": [
+        "בית הכנסת ישורון — 3 דקות הליכה, ובית הכנסת הגדול — 8 דקות",
+        "יציאה במוצאי שבת עד שעה וחצי אחרי צאת השבת, בלי תוספת",
+        "כניסה בקוד — אין צורך במפתח בשבת"
+      ],
+      "amenities": [
+        "plata",
+        "urn",
+        "shabbat_clocks",
+        "kosher_kitchen",
+        "near_synagogue",
+        "late_checkout_motzash",
+        "keypad_lock",
+        "crib",
+        "high_chair",
+        "garden",
+        "ac",
+        "wifi",
+        "washing_machine"
+      ],
+      "houseRules": [
+        "בלי עישון בדירה ובגינה",
+        "שקט אחרי 23:00 — יש שכנים מעל",
+        "אין אירועים מעל 12 משתתפים"
+      ],
+      "checkInTime": "14:00",
+      "checkOutTime": "11:00",
+      "images": [
+        {
+          "src": "assets/img/apartments/jerusalem-rechavia-garden/1.svg",
+          "alt": "חלון קשת באבן ירושלמית עם נוף לעיר",
+          "placeholder": true
+        },
+        {
+          "src": "assets/img/apartments/jerusalem-rechavia-garden/2.svg",
+          "alt": "שולחן שבת ערוך בסלון",
+          "placeholder": true
+        },
+        {
+          "src": "assets/img/apartments/jerusalem-rechavia-garden/3.svg",
+          "alt": "הגינה הפרטית",
+          "placeholder": true
+        }
+      ],
+      "pricing": {
+        "nightly": 900,
+        "weekendNightly": 1250,
+        "weekendNights": [
+          4,
+          5
+        ],
+        "includedGuests": 4,
+        "extraGuestPerNight": 100,
+        "cleaningFee": 250,
+        "minNights": 1,
+        "lengthDiscounts": [
+          {
+            "minNights": 3,
+            "percent": 10
+          }
+        ],
+        "specialPeriods": [
+          {
+            "name": "חנוכה",
+            "from": "2026-12-04",
+            "to": "2026-12-11",
+            "nightly": 1400,
+            "minNights": 2
+          },
+          {
+            "name": "פסח",
+            "from": "2027-04-21",
+            "to": "2027-04-28",
+            "nightly": 1700,
+            "minNights": 3
+          }
+        ]
+      },
+      "published": true,
+      "createdAt": "2026-09-01"
+    },
+    {
+      "id": "safed-old-city-stone-house",
+      "title": "בית אבן בעיר העתיקה",
+      "city": "צפת",
+      "neighborhood": "העיר העתיקה",
+      "geo": {
+        "lat": 32.9646,
+        "lng": 35.496
+      },
+      "candleLightingMinutes": 18,
+      "rooms": 5,
+      "beds": 11,
+      "maxGuests": 12,
+      "cribs": 2,
+      "summary": "בית משפחתי בן 150 שנה בסמטאות, ארבע דקות מבית הכנסת האר״י.",
+      "description": "בית אבן עם דלת כחולה בלב סמטאות העיר העתיקה, במרחק הליכה מבתי הכנסת העתיקים. חמישה חדרי שינה על שתי קומות, וסלון גדול עם שולחן ל־14 סועדים.\n\nהמטבח כשר למהדרין: שתי פלטות, מיחם גדול, ושעוני שבת על כל המזגנים והתאורה. במרפסת העליונה נבנית סוכה בחג הסוכות.\n\nמתאים לשבתות משפחתיות, לשבת חתן קטנה ולקבוצות. חניה ציבורית ברחוב ירושלים, חמש דקות הליכה.",
+      "highlights": [
+        "בית הכנסת האר״י — 4 דקות הליכה",
+        "שולחן ל־14 ושתי פלטות",
+        "סוכה במרפסת בחג הסוכות"
+      ],
+      "amenities": [
+        "plata",
+        "urn",
+        "shabbat_clocks",
+        "kosher_kitchen",
+        "near_synagogue",
+        "late_checkout_motzash",
+        "sukkah",
+        "crib",
+        "high_chair",
+        "ac",
+        "wifi",
+        "balcony",
+        "washing_machine"
+      ],
+      "houseRules": [
+        "בלי עישון בתוך הבית",
+        "אין חניה צמודה",
+        "מדרגות אבן בכניסה"
+      ],
+      "checkInTime": "13:00",
+      "checkOutTime": "11:00",
+      "images": [
+        {
+          "src": "assets/img/apartments/safed-old-city-stone-house/1.svg",
+          "alt": "הדלת הכחולה בסמטה",
+          "placeholder": true
+        },
+        {
+          "src": "assets/img/apartments/safed-old-city-stone-house/2.svg",
+          "alt": "שולחן שבת בסלון",
+          "placeholder": true
+        },
+        {
+          "src": "assets/img/apartments/safed-old-city-stone-house/3.svg",
+          "alt": "חדר השינה הראשי",
+          "placeholder": true
+        }
+      ],
+      "pricing": {
+        "nightly": 1100,
+        "weekendNightly": 1600,
+        "weekendNights": [
+          4,
+          5
+        ],
+        "includedGuests": 6,
+        "extraGuestPerNight": 90,
+        "cleaningFee": 300,
+        "minNights": 1,
+        "lengthDiscounts": [
+          {
+            "minNights": 3,
+            "percent": 12
+          }
+        ],
+        "specialPeriods": [
+          {
+            "name": "ל״ג בעומר",
+            "from": "2027-05-24",
+            "to": "2027-05-25",
+            "nightly": 2400,
+            "minNights": 2
+          }
+        ]
+      },
+      "published": true,
+      "createdAt": "2026-09-03"
+    },
+    {
+      "id": "tiberias-kinneret-view",
+      "title": "דירת נוף לכנרת",
+      "city": "טבריה",
+      "neighborhood": "קריית שמואל",
+      "geo": {
+        "lat": 32.7984,
+        "lng": 35.5225
+      },
+      "candleLightingMinutes": 18,
+      "rooms": 3,
+      "beds": 6,
+      "maxGuests": 6,
+      "cribs": 1,
+      "summary": "שלושה חדרים בקומה שמינית, עם חלון ענק לכנרת ולרמת הגולן.",
+      "description": "דירה משפחתית בקריית שמואל, השכונה הדתית השקטה של טבריה. מהסלון ומהמרפסת רואים את הכנרת מקצה לקצה.\n\nבבניין מעלית שבת, ובמתחם בריכה פתוחה בקיץ (שעות נפרדות). המטבח כשר, עם פלטה, מיחם ושעוני שבת.\n\nחמש דקות נסיעה לטיילת ולחופים, ושתי דקות הליכה לבית הכנסת השכונתי.",
+      "highlights": [
+        "מעלית שבת בבניין",
+        "בריכה במתחם, שעות נפרדות",
+        "חניה פרטית במקום"
+      ],
+      "amenities": [
+        "plata",
+        "urn",
+        "shabbat_clocks",
+        "kosher_kitchen",
+        "near_synagogue",
+        "late_checkout_motzash",
+        "crib",
+        "pool",
+        "ac",
+        "wifi",
+        "parking",
+        "elevator",
+        "balcony"
+      ],
+      "houseRules": [
+        "בלי עישון",
+        "הבריכה פתוחה ממאי עד אוקטובר"
+      ],
+      "checkInTime": "15:00",
+      "checkOutTime": "11:00",
+      "images": [
+        {
+          "src": "assets/img/apartments/tiberias-kinneret-view/1.svg",
+          "alt": "הסלון והחלון לכנרת",
+          "placeholder": true
+        },
+        {
+          "src": "assets/img/apartments/tiberias-kinneret-view/2.svg",
+          "alt": "שולחן שבת",
+          "placeholder": true
+        },
+        {
+          "src": "assets/img/apartments/tiberias-kinneret-view/3.svg",
+          "alt": "חדר ההורים",
+          "placeholder": true
+        }
+      ],
+      "pricing": {
+        "nightly": 650,
+        "weekendNightly": 950,
+        "weekendNights": [
+          4,
+          5
+        ],
+        "includedGuests": 4,
+        "extraGuestPerNight": 70,
+        "cleaningFee": 180,
+        "minNights": 1,
+        "lengthDiscounts": [
+          {
+            "minNights": 3,
+            "percent": 10
+          },
+          {
+            "minNights": 6,
+            "percent": 18
+          }
+        ],
+        "specialPeriods": []
+      },
+      "published": true,
+      "createdAt": "2026-09-05"
+    },
+    {
+      "id": "netanya-seafront-penthouse",
+      "title": "פנטהאוז מול הים",
+      "city": "נתניה",
+      "neighborhood": "עיר ימים",
+      "geo": {
+        "lat": 32.2915,
+        "lng": 34.8406
+      },
+      "candleLightingMinutes": 18,
+      "rooms": 5,
+      "beds": 9,
+      "maxGuests": 9,
+      "cribs": 1,
+      "summary": "פנטהאוז עם מרפסת גג מול הים, מעלית שבת ושתי חניות.",
+      "description": "פנטהאוז בקומה 14 בעיר ימים, עם מרפסת גג של 60 מ״ר שפונה לים. השקיעה של ליל שבת מכאן היא חלק מהחוויה.\n\nחמישה חדרים: סוויטת הורים, שני חדרי ילדים, חדר אורחים וחדר משחקים עם ספה נפתחת. המטבח כשר עם פלטה, מיחם ושעוני שבת.\n\nבבניין מעלית שבת ולובי נגיש. בית הכנסת של השכונה בהליכה של שש דקות, והחוף — שלוש.",
+      "highlights": [
+        "מרפסת גג של 60 מ״ר מול הים",
+        "מעלית שבת ושתי חניות",
+        "החוף — 3 דקות הליכה"
+      ],
+      "amenities": [
+        "plata",
+        "urn",
+        "shabbat_clocks",
+        "kosher_kitchen",
+        "near_synagogue",
+        "crib",
+        "ac",
+        "wifi",
+        "parking",
+        "elevator",
+        "balcony",
+        "bbq",
+        "accessible",
+        "washing_machine"
+      ],
+      "houseRules": [
+        "בלי עישון בתוך הדירה",
+        "מנגל רק במרפסת הגג ולא בשבת",
+        "מינימום שני לילות"
+      ],
+      "checkInTime": "15:00",
+      "checkOutTime": "11:00",
+      "images": [
+        {
+          "src": "assets/img/apartments/netanya-seafront-penthouse/1.svg",
+          "alt": "הסלון והחלון לים בשקיעה",
+          "placeholder": true
+        },
+        {
+          "src": "assets/img/apartments/netanya-seafront-penthouse/2.svg",
+          "alt": "שולחן שבת",
+          "placeholder": true
+        },
+        {
+          "src": "assets/img/apartments/netanya-seafront-penthouse/3.svg",
+          "alt": "סוויטת ההורים",
+          "placeholder": true
+        }
+      ],
+      "pricing": {
+        "nightly": 1400,
+        "weekendNightly": 1900,
+        "weekendNights": [
+          4,
+          5
+        ],
+        "includedGuests": 6,
+        "extraGuestPerNight": 120,
+        "cleaningFee": 350,
+        "minNights": 2,
+        "lengthDiscounts": [
+          {
+            "minNights": 4,
+            "percent": 10
+          }
+        ],
+        "specialPeriods": []
+      },
+      "published": true,
+      "createdAt": "2026-09-08"
+    },
+    {
+      "id": "beit-shemesh-family-house",
+      "title": "בית גדול לשבת חתן",
+      "city": "בית שמש",
+      "neighborhood": "רמת בית שמש א׳",
+      "geo": {
+        "lat": 31.7172,
+        "lng": 34.988
+      },
+      "candleLightingMinutes": 18,
+      "rooms": 7,
+      "beds": 16,
+      "maxGuests": 18,
+      "cribs": 3,
+      "summary": "שבעה חדרים, גינה עם פרגולה ושולחן ל־24 — לשבתות משפחתיות גדולות.",
+      "description": "וילה משפחתית ברמת בית שמש א׳, שנבנתה בדיוק לשבתות של משפחות גדולות: שבת חתן, בר מצווה, שבת של בני דודים.\n\nבסלון שולחן נפתח ל־24 סועדים, ובגינה פרגולה עם שולחן נוסף. במטבח שתי פלטות גדולות, שני מיחמים, שני מקררים ושעוני שבת בכל הבית.\n\nשבעה חדרי שינה ב־16 מיטות, שלוש מיטות תינוק ושני כיסאות אוכל. בית הכנסת של הרחוב במרחק שתי דקות הליכה, ובשכונה ארבעה מניינים בשבת.",
+      "highlights": [
+        "שולחן ל־24 ופרגולה בגינה",
+        "שתי פלטות, שני מיחמים, שני מקררים",
+        "בית כנסת — 2 דקות הליכה"
+      ],
+      "amenities": [
+        "plata",
+        "urn",
+        "shabbat_clocks",
+        "kosher_kitchen",
+        "near_synagogue",
+        "late_checkout_motzash",
+        "keypad_lock",
+        "sukkah",
+        "crib",
+        "high_chair",
+        "garden",
+        "ac",
+        "wifi",
+        "parking",
+        "washing_machine",
+        "bbq"
+      ],
+      "houseRules": [
+        "בלי עישון בתוך הבית",
+        "שקט בגינה אחרי 23:00",
+        "אירועים עד 40 משתתפים בתיאום מראש"
+      ],
+      "checkInTime": "13:00",
+      "checkOutTime": "11:00",
+      "images": [
+        {
+          "src": "assets/img/apartments/beit-shemesh-family-house/1.svg",
+          "alt": "הגינה והפרגולה",
+          "placeholder": true
+        },
+        {
+          "src": "assets/img/apartments/beit-shemesh-family-house/2.svg",
+          "alt": "שולחן השבת הגדול",
+          "placeholder": true
+        },
+        {
+          "src": "assets/img/apartments/beit-shemesh-family-house/3.svg",
+          "alt": "חדר השינה של ההורים",
+          "placeholder": true
+        }
+      ],
+      "pricing": {
+        "nightly": 1500,
+        "weekendNightly": 2200,
+        "weekendNights": [
+          4,
+          5
+        ],
+        "includedGuests": 10,
+        "extraGuestPerNight": 80,
+        "cleaningFee": 400,
+        "minNights": 1,
+        "lengthDiscounts": [
+          {
+            "minNights": 3,
+            "percent": 10
+          }
+        ],
+        "specialPeriods": [
+          {
+            "name": "פסח",
+            "from": "2027-04-21",
+            "to": "2027-04-28",
+            "nightly": 3200,
+            "minNights": 4
+          }
+        ]
+      },
+      "published": true,
+      "createdAt": "2026-09-10"
+    }
+  ]
+}

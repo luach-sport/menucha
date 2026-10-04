@@ -1,0 +1,83 @@
+{
+  "id": "netanya-seafront-penthouse",
+  "title": "פנטהאוז מול הים",
+  "city": "נתניה",
+  "neighborhood": "עיר ימים",
+  "geo": {
+    "lat": 32.2915,
+    "lng": 34.8406
+  },
+  "candleLightingMinutes": 18,
+  "rooms": 5,
+  "beds": 9,
+  "maxGuests": 9,
+  "cribs": 1,
+  "summary": "פנטהאוז עם מרפסת גג מול הים, מעלית שבת ושתי חניות.",
+  "description": "פנטהאוז בקומה 14 בעיר ימים, עם מרפסת גג של 60 מ״ר שפונה לים. השקיעה של ליל שבת מכאן היא חלק מהחוויה.\n\nחמישה חדרים: סוויטת הורים, שני חדרי ילדים, חדר אורחים וחדר משחקים עם ספה נפתחת. המטבח כשר עם פלטה, מיחם ושעוני שבת.\n\nבבניין מעלית שבת ולובי נגיש. בית הכנסת של השכונה בהליכה של שש דקות, והחוף — שלוש.",
+  "highlights": [
+    "מרפסת גג של 60 מ״ר מול הים",
+    "מעלית שבת ושתי חניות",
+    "החוף — 3 דקות הליכה"
+  ],
+  "amenities": [
+    "plata",
+    "urn",
+    "shabbat_clocks",
+    "kosher_kitchen",
+    "near_synagogue",
+    "crib",
+    "ac",
+    "wifi",
+    "parking",
+    "elevator",
+    "balcony",
+    "bbq",
+    "accessible",
+    "washing_machine"
+  ],
+  "houseRules": [
+    "בלי עישון בתוך הדירה",
+    "מנגל רק במרפסת הגג ולא בשבת",
+    "מינימום שני לילות"
+  ],
+  "checkInTime": "15:00",
+  "checkOutTime": "11:00",
+  "images": [
+    {
+      "src": "assets/img/apartments/netanya-seafront-penthouse/1.svg",
+      "alt": "הסלון והחלון לים בשקיעה",
+      "placeholder": true
+    },
+    {
+      "src": "assets/img/apartments/netanya-seafront-penthouse/2.svg",
+      "alt": "שולחן שבת",
+      "placeholder": true
+    },
+    {
+      "src": "assets/img/apartments/netanya-seafront-penthouse/3.svg",
+      "alt": "סוויטת ההורים",
+      "placeholder": true
+    }
+  ],
+  "pricing": {
+    "nightly": 1400,
+    "weekendNightly": 1900,
+    "weekendNights": [
+      4,
+      5
+    ],
+    "includedGuests": 6,
+    "extraGuestPerNight": 120,
+    "cleaningFee": 350,
+    "minNights": 2,
+    "lengthDiscounts": [
+      {
+        "minNights": 4,
+        "percent": 10
+      }
+    ],
+    "specialPeriods": []
+  },
+  "published": true,
+  "createdAt": "2026-09-08"
+}

@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>הוספת דירה · מנוחה</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Suez+One&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body class="owner-page">
+  <div class="demo-banner" data-demo-banner hidden>מצב הדגמה — הטופס לא נשלח לשום מקום.</div>
+  <header class="site-header is-plain">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" data-icon="candles"></span>
+        <span class="brand-name" data-site-name>מנוחה</span>
+        <span class="brand-tag">לבעלי דירות</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="owner-intro">
+      <h1>הוספת דירה לאתר</h1>
+      <p class="muted">ממלאים פעם אחת, והדירה נשלחת לבדיקה. היא תופיע באתר אחרי שהמנהל יאשר אותה — בדרך כלל תוך יום. פרטי הקשר שלכם לא מתפרסמים.</p>
+    </div>
+
+    <form class="owner-form" id="owner-form" novalidate>
+      <fieldset class="form-step">
+        <legend class="step-title"><span class="step-num">1 מתוך 5</span>הדירה</legend>
+        <div class="cols-2">
+          <div class="field">
+            <label for="p-title">שם הדירה באתר</label>
+            <input class="input" id="p-title" name="title" maxlength="60" placeholder="דירת גן ברחביה" required>
+            <span class="field-error" id="e-title"></span>
+          </div>
+          <div class="field">
+            <label for="p-summary">משפט אחד שמתאר אותה</label>
+            <input class="input" id="p-summary" name="summary" maxlength="160" placeholder="ארבעה חדרים, גינה פרטית ושלוש דקות לבית הכנסת">
+          </div>
+          <div class="field">
+            <label for="p-city">עיר</label>
+            <input class="input" id="p-city" name="city" list="cities" maxlength="40" required>
+            <datalist id="cities">
+              <option value="ירושלים"></option><option value="צפת"></option><option value="טבריה"></option><option value="נתניה"></option>
+              <option value="בית שמש"></option><option value="בני ברק"></option><option value="תל אביב"></option><option value="חיפה"></option>
+              <option value="אשדוד"></option><option value="מודיעין"></option><option value="מודיעין עילית"></option><option value="ביתר עילית"></option>
+              <option value="אלעד"></option><option value="נהריה"></option><option value="אילת"></option><option value="זכרון יעקב"></option>
+            </datalist>
+            <span class="field-error" id="e-city"></span>
+          </div>
+          <div class="field">
+            <label for="p-neighborhood">שכונה</label>
+            <input class="input" id="p-neighborhood" name="neighborhood" maxlength="40">
+          </div>
+        </div>
+        <div class="cols-4">
+          <div class="field"><label for="p-rooms">חדרים</label><input class="input num" id="p-rooms" name="rooms" type="number" min="1" max="20" value="3"></div>
+          <div class="field"><label for="p-beds">מקומות לינה</label><input class="input num" id="p-beds" name="beds" type="number" min="1" max="60" value="6"><span class="field-error" id="e-beds"></span></div>
+          <div class="field"><label for="p-maxGuests">מקסימום אורחים</label><input class="input num" id="p-maxGuests" name="maxGuests" type="number" min="1" max="60" value="6"></div>
+          <div class="field"><label for="p-cribs">מיטות תינוק</label><input class="input num" id="p-cribs" name="cribs" type="number" min="0" max="10" value="0"></div>
+        </div>
+        <div class="field">
+          <label for="p-description">תיאור</label>
+          <textarea class="input" id="p-description" name="description" maxlength="3000" placeholder="איך הדירה בנויה, מה יש בכל חדר, מה יש בסביבה, כמה דקות הליכה לבית הכנסת…" required></textarea>
+          <span class="field-hint">שורה ריקה מתחילה פסקה חדשה. לפחות שני משפטים.</span>
+          <span class="field-error" id="e-description"></span>
+        </div>
+        <div class="field">
+          <label for="p-highlights">שלושה דברים שאורחים צריכים לדעת (לא חובה)</label>
+          <textarea class="input" id="p-highlights" name="highlights" rows="3" style="min-height:96px" placeholder="בית הכנסת ישורון — 3 דקות הליכה&#10;מעלית שבת&#10;יציאה במוצאי שבת בלי תוספת"></textarea>
+          <span class="field-hint">כל שורה — נקודה אחת.</span>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-step">
+        <legend class="step-title"><span class="step-num">2 מתוך 5</span>מה יש בדירה</legend>
+        <div id="amenity-checks" class="form-grid"></div>
+      </fieldset>
+
+      <fieldset class="form-step">
+        <legend class="step-title"><span class="step-num">3 מתוך 5</span>מחיר</legend>
+        <div class="cols-3">
+          <div class="field"><label for="p-nightly">לילה רגיל</label><div class="input-suffix"><input class="input num" id="p-nightly" type="number" min="0" step="10" value="800"><span>₪</span></div><span class="field-error" id="e-nightly"></span></div>
+          <div class="field"><label for="p-weekendNightly">לילה בסופ״ש</label><div class="input-suffix"><input class="input num" id="p-weekendNightly" type="number" min="0" step="10" value="1100"><span>₪</span></div></div>
+          <div class="field"><label for="p-cleaningFee">ניקיון (פעם אחת)</label><div class="input-suffix"><input class="input num" id="p-cleaningFee" type="number" min="0" step="10" value="200"><span>₪</span></div></div>
+        </div>
+        <div class="field">
+          <span class="label">אילו לילות במחיר סופ״ש?</span>
+          <div class="inline-checks" id="weekend-nights">
+            <label class="check"><input type="checkbox" value="4" checked>ליל חמישי</label>
+            <label class="check"><input type="checkbox" value="5" checked>ליל שישי (שבת)</label>
+            <label class="check"><input type="checkbox" value="6">מוצאי שבת</label>
+          </div>
+        </div>
+        <div class="cols-3">
+          <div class="field"><label for="p-includedGuests">אורחים כלולים במחיר</label><input class="input num" id="p-includedGuests" type="number" min="1" max="60" value="4"></div>
+          <div class="field"><label for="p-extraGuest">תוספת לכל אורח נוסף, ללילה</label><div class="input-suffix"><input class="input num" id="p-extraGuest" type="number" min="0" step="10" value="80"><span>₪</span></div></div>
+          <div class="field"><label for="p-minNights">מינימום לילות</label><input class="input num" id="p-minNights" type="number" min="1" max="14" value="1"></div>
+        </div>
+        <div class="field">
+          <span class="label">הנחה לשהייה ארוכה (לא חובה)</span>
+          <div class="sentence">
+            <span>הנחה של</span>
+            <input class="input num" id="p-discountPercent" type="number" min="0" max="50" value="10" aria-label="אחוז הנחה">
+            <span>% לשהייה של</span>
+            <input class="input num" id="p-discountNights" type="number" min="0" max="30" value="3" aria-label="מספר לילות מינימלי להנחה">
+            <span>לילות ומעלה</span>
+          </div>
+        </div>
+        <div class="preview-quote" aria-live="polite">
+          <h3 id="preview-title">כך זה ייראה לאורחים</h3>
+          <div class="quote" id="preview-quote"></div>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-step">
+        <legend class="step-title"><span class="step-num">4 מתוך 5</span>תמונות, מיקום וכללים</legend>
+        <div class="field">
+          <label for="p-images">קישורים לתמונות (לא חובה)</label>
+          <textarea class="input" id="p-images" dir="ltr" style="min-height:96px" placeholder="https://…/salon.jpg"></textarea>
+          <span class="field-hint">קישור אחד בכל שורה, לתמונה עצמה. אין קישורים? אפשר לשלוח את התמונות למנהל בוואטסאפ אחרי השליחה.</span>
+        </div>
+        <div class="cols-2">
+          <div class="field">
+            <label for="p-map">קישור למיקום בגוגל מפות (לא חובה)</label>
+            <input class="input" id="p-map" dir="ltr" placeholder="https://www.google.com/maps/…@31.77,35.21…">
+            <span class="field-hint" id="map-hint">משמש לחישוב זמני השבת בעמוד הדירה. הכתובת המדויקת לא מתפרסמת.</span>
+          </div>
+          <div class="cols-2">
+            <div class="field"><label for="p-checkIn">כניסה מ־</label><input class="input num" id="p-checkIn" type="time" value="14:00"></div>
+            <div class="field"><label for="p-checkOut">יציאה עד</label><input class="input num" id="p-checkOut" type="time" value="11:00"></div>
+          </div>
+        </div>
+        <div class="field">
+          <label for="p-rules">כללי הבית (לא חובה)</label>
+          <textarea class="input" id="p-rules" style="min-height:96px" placeholder="בלי עישון בדירה&#10;שקט אחרי 23:00"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-step">
+        <legend class="step-title"><span class="step-num">5 מתוך 5</span>פרטי הקשר שלכם</legend>
+        <p class="muted small">רק המנהל רואה את הפרטים האלה. הם לא מופיעים באתר.</p>
+        <div class="cols-3">
+          <div class="field"><label for="o-name">שם מלא</label><input class="input" id="o-name" autocomplete="name" maxlength="80" required><span class="field-error" id="e-oname"></span></div>
+          <div class="field"><label for="o-phone">טלפון</label><input class="input num" id="o-phone" type="tel" inputmode="tel" dir="ltr" autocomplete="tel" placeholder="050-1234567" maxlength="20" required><span class="field-error" id="e-ophone"></span></div>
+          <div class="field"><label for="o-email">אימייל (לא חובה)</label><input class="input" id="o-email" type="email" dir="ltr" autocomplete="email" maxlength="120"><span class="field-error" id="e-oemail"></span></div>
+        </div>
+        <div class="field" id="code-field" hidden>
+          <label for="o-code">קוד בעלי דירות</label>
+          <input class="input num" id="o-code" dir="ltr" maxlength="40" autocomplete="off" style="max-width:240px">
+          <span class="field-hint">הקוד שקיבלתם מהמנהל.</span>
+          <span class="field-error" id="e-ocode"></span>
+        </div>
+        <div class="hp-field" aria-hidden="true">
+          <label for="o-website">אתר אינטרנט (השאירו ריק)</label>
+          <input id="o-website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+      </fieldset>
+
+      <div id="owner-msg" aria-live="assertive"></div>
+      <div class="submit-row">
+        <button class="btn" type="submit" id="owner-submit">שליחת הדירה לאישור</button>
+        <span class="small muted" id="draft-note"></span>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span><span data-site-name>מנוחה</span> · © <span data-year></span></span>
+      <span>שאלות? <span data-manager-phone><a href="#" target="_blank" rel="noopener"><span data-phone-text></span></a></span></span>
+    </div>
+  </footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/icons.js"></script>
+  <script src="assets/js/pricing.js"></script>
+  <script src="assets/js/validate.js"></script>
+  <script src="assets/js/amenities.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/add-property.js"></script>
+</body>
+</html>

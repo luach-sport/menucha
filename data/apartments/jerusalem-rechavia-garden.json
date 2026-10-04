@@ -1,0 +1,97 @@
+{
+  "id": "jerusalem-rechavia-garden",
+  "title": "דירת גן ברחביה",
+  "city": "ירושלים",
+  "neighborhood": "רחביה",
+  "geo": {
+    "lat": 31.7726,
+    "lng": 35.2118
+  },
+  "candleLightingMinutes": 40,
+  "rooms": 4,
+  "beds": 7,
+  "maxGuests": 7,
+  "cribs": 1,
+  "summary": "ארבעה חדרים, גינה פרטית ושלוש דקות הליכה לבית הכנסת ישורון.",
+  "description": "דירת גן שקטה בבניין אבן ישן ברחביה, ברחוב צדדי בלי תנועה בשבת. הסלון נפתח לגינה עם שולחן לשמונה, כך שאפשר לעשות את סעודת השבת בחוץ כשמזג האוויר מאפשר.\n\nבמטבח שני כיורים, כלים נפרדים לבשר ולחלב, פלטה גדולה ומיחם של 40 כוסות. שעוני שבת מותקנים על המזגנים, על התאורה בסלון ובחדרי השינה.\n\nבחדר ההורים מיטה זוגית, בשני חדרי הילדים שתי מיטות בכל חדר, ובסלון ספה נפתחת. מיטת תינוק וכיסא אוכל מחכים בארון.",
+  "highlights": [
+    "בית הכנסת ישורון — 3 דקות הליכה, ובית הכנסת הגדול — 8 דקות",
+    "יציאה במוצאי שבת עד שעה וחצי אחרי צאת השבת, בלי תוספת",
+    "כניסה בקוד — אין צורך במפתח בשבת"
+  ],
+  "amenities": [
+    "plata",
+    "urn",
+    "shabbat_clocks",
+    "kosher_kitchen",
+    "near_synagogue",
+    "late_checkout_motzash",
+    "keypad_lock",
+    "crib",
+    "high_chair",
+    "garden",
+    "ac",
+    "wifi",
+    "washing_machine"
+  ],
+  "houseRules": [
+    "בלי עישון בדירה ובגינה",
+    "שקט אחרי 23:00 — יש שכנים מעל",
+    "אין אירועים מעל 12 משתתפים"
+  ],
+  "checkInTime": "14:00",
+  "checkOutTime": "11:00",
+  "images": [
+    {
+      "src": "assets/img/apartments/jerusalem-rechavia-garden/1.svg",
+      "alt": "חלון קשת באבן ירושלמית עם נוף לעיר",
+      "placeholder": true
+    },
+    {
+      "src": "assets/img/apartments/jerusalem-rechavia-garden/2.svg",
+      "alt": "שולחן שבת ערוך בסלון",
+      "placeholder": true
+    },
+    {
+      "src": "assets/img/apartments/jerusalem-rechavia-garden/3.svg",
+      "alt": "הגינה הפרטית",
+      "placeholder": true
+    }
+  ],
+  "pricing": {
+    "nightly": 900,
+    "weekendNightly": 1250,
+    "weekendNights": [
+      4,
+      5
+    ],
+    "includedGuests": 4,
+    "extraGuestPerNight": 100,
+    "cleaningFee": 250,
+    "minNights": 1,
+    "lengthDiscounts": [
+      {
+        "minNights": 3,
+        "percent": 10
+      }
+    ],
+    "specialPeriods": [
+      {
+        "name": "חנוכה",
+        "from": "2026-12-04",
+        "to": "2026-12-11",
+        "nightly": 1400,
+        "minNights": 2
+      },
+      {
+        "name": "פסח",
+        "from": "2027-04-21",
+        "to": "2027-04-28",
+        "nightly": 1700,
+        "minNights": 3
+      }
+    ]
+  },
+  "published": true,
+  "createdAt": "2026-09-01"
+}

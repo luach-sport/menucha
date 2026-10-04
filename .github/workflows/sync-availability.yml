@@ -1,0 +1,61 @@
+# בונה את data/availability.json מתוך הפניות המסומנות Approved,
+# כדי שתאריכים תפוסים לא יוצעו באתר.
+# רץ כל חצי שעה, וגם מיד כשמשנים סטטוס בממשק הניהול.
+name: סנכרון יומן התפוסה
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'
+  workflow_dispatch:
+  issues:
+    types: [labeled, unlabeled, closed, reopened, edited, deleted]
+
+permissions:
+  contents: write
+  pages: write
+  issues: read
+
+concurrency:
+  group: data-commit
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    # שינויים ב-Issues של הרפוזיטורי הזה רלוונטיים רק כשהפניות נשמרות כאן (בלי CRM_REPO),
+    # ורק כשהם נוגעים לתגית Approved
+    if: >-
+      github.event_name != 'issues' ||
+      (vars.CRM_REPO == '' &&
+        (github.event.label.name == 'Approved' || contains(github.event.issue.labels.*.name, 'Approved')))
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: קריאת ההזמנות המאושרות
+        id: sync
+        run: node scripts/sync-availability.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CRM_REPO: ${{ vars.CRM_REPO }}
+          CRM_TOKEN: ${{ secrets.CRM_TOKEN }}
+
+      - name: שמירה ברפוזיטורי
+        if: steps.sync.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/availability.json
+          git commit -m "עדכון יומן התפוסה"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
+      - name: בניית האתר מחדש
+        if: steps.sync.outputs.changed == 'true'
+        run: gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" >/dev/null || echo "GitHub Pages יתעדכן לבד מה-commit."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

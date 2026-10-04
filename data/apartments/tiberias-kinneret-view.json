@@ -1,0 +1,85 @@
+{
+  "id": "tiberias-kinneret-view",
+  "title": "דירת נוף לכנרת",
+  "city": "טבריה",
+  "neighborhood": "קריית שמואל",
+  "geo": {
+    "lat": 32.7984,
+    "lng": 35.5225
+  },
+  "candleLightingMinutes": 18,
+  "rooms": 3,
+  "beds": 6,
+  "maxGuests": 6,
+  "cribs": 1,
+  "summary": "שלושה חדרים בקומה שמינית, עם חלון ענק לכנרת ולרמת הגולן.",
+  "description": "דירה משפחתית בקריית שמואל, השכונה הדתית השקטה של טבריה. מהסלון ומהמרפסת רואים את הכנרת מקצה לקצה.\n\nבבניין מעלית שבת, ובמתחם בריכה פתוחה בקיץ (שעות נפרדות). המטבח כשר, עם פלטה, מיחם ושעוני שבת.\n\nחמש דקות נסיעה לטיילת ולחופים, ושתי דקות הליכה לבית הכנסת השכונתי.",
+  "highlights": [
+    "מעלית שבת בבניין",
+    "בריכה במתחם, שעות נפרדות",
+    "חניה פרטית במקום"
+  ],
+  "amenities": [
+    "plata",
+    "urn",
+    "shabbat_clocks",
+    "kosher_kitchen",
+    "near_synagogue",
+    "late_checkout_motzash",
+    "crib",
+    "pool",
+    "ac",
+    "wifi",
+    "parking",
+    "elevator",
+    "balcony"
+  ],
+  "houseRules": [
+    "בלי עישון",
+    "הבריכה פתוחה ממאי עד אוקטובר"
+  ],
+  "checkInTime": "15:00",
+  "checkOutTime": "11:00",
+  "images": [
+    {
+      "src": "assets/img/apartments/tiberias-kinneret-view/1.svg",
+      "alt": "הסלון והחלון לכנרת",
+      "placeholder": true
+    },
+    {
+      "src": "assets/img/apartments/tiberias-kinneret-view/2.svg",
+      "alt": "שולחן שבת",
+      "placeholder": true
+    },
+    {
+      "src": "assets/img/apartments/tiberias-kinneret-view/3.svg",
+      "alt": "חדר ההורים",
+      "placeholder": true
+    }
+  ],
+  "pricing": {
+    "nightly": 650,
+    "weekendNightly": 950,
+    "weekendNights": [
+      4,
+      5
+    ],
+    "includedGuests": 4,
+    "extraGuestPerNight": 70,
+    "cleaningFee": 180,
+    "minNights": 1,
+    "lengthDiscounts": [
+      {
+        "minNights": 3,
+        "percent": 10
+      },
+      {
+        "minNights": 6,
+        "percent": 18
+      }
+    ],
+    "specialPeriods": []
+  },
+  "published": true,
+  "createdAt": "2026-09-05"
+}
