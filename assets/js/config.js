@@ -12,8 +12,8 @@ window.SITE_CONFIG = {
   relayUrl: '',
 
   // וואטסאפ של המנהל — לכפתור "שאלה בוואטסאפ" ולגיבוי כשאין ממסר. פורמט בינלאומי בלי +
-  managerWhatsApp: '972500000000',
-  managerPhoneDisplay: '050-0000000',
+  managerWhatsApp: '',          // למשל '972501234567'
+  managerPhoneDisplay: '',      // למשל '050-1234567'
 
   // לממשק המנהל (admin.html)
   github: {
